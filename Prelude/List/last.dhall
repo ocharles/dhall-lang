@@ -5,6 +5,6 @@ let last
 
 let example0 = assert : last Natural [ 0, 1, 2 ] ≡ Some 2
 
-let example1 = assert : last Natural ([] : List Natural) ≡ None Natural
+let example1 = assert : last Natural ([] : List Natural) ≡ None
 
 in  last

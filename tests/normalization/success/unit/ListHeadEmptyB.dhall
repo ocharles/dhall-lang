@@ -1,1 +1,1 @@
-λ(T : Type) → None T
+λ(T : Type) → None

@@ -11,14 +11,12 @@ let head
             λ(r : Optional a) →
               merge { Some = λ(x : a) → Some x, None = r } l
           )
-          (None a)
+          None
 
-let example0 = assert : head Natural [ None Natural, Some 1, Some 2 ] ≡ Some 1
+let example0 = assert : head Natural [ None, Some 1, Some 2 ] ≡ Some 1
 
-let example1 =
-      assert : head Natural [ None Natural, None Natural ] ≡ None Natural
+let example1 = assert : head Natural [ None, None ] ≡ None
 
-let example2 =
-      assert : head Natural ([] : List (Optional Natural)) ≡ None Natural
+let example2 = assert : head Natural ([] : List (Optional Natural)) ≡ None
 
 in  head

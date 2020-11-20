@@ -7,6 +7,6 @@ let null
 
 let example0 = assert : null Natural (Some 2) ≡ False
 
-let example1 = assert : null Natural (None Natural) ≡ True
+let example1 = assert : null Natural None ≡ True
 
 in  null

@@ -15,7 +15,6 @@ let fold
 
 let example0 = assert : fold Natural (Some 2) Natural (λ(x : Natural) → x) 0 ≡ 2
 
-let example1 =
-      assert : fold Natural (None Natural) Natural (λ(x : Natural) → x) 0 ≡ 0
+let example1 = assert : fold Natural None Natural (λ(x : Natural) → x) 0 ≡ 0
 
 in  fold

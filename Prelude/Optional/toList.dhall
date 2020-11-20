@@ -7,6 +7,6 @@ let toList
 
 let example0 = assert : toList Natural (Some 1) ≡ [ 1 ]
 
-let example1 = assert : toList Natural (None Natural) ≡ ([] : List Natural)
+let example1 = assert : toList Natural None ≡ ([] : List Natural)
 
 in  toList

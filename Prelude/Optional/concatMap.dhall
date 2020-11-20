@@ -5,19 +5,16 @@ let concatMap
       λ(b : Type) →
       λ(f : a → Optional b) →
       λ(o : Optional a) →
-        merge { Some = f, None = None b } o
+        merge { Some = f, None = None } o
 
 let exampleFun
     : Natural → Optional Natural
-    = λ(n : Natural) → if Natural/even n then Some (n + 1) else None Natural
+    = λ(n : Natural) → if Natural/even n then Some (n + 1) else None
 
-let example0 =
-      assert : concatMap Natural Natural exampleFun (Some 1) ≡ None Natural
+let example0 = assert : concatMap Natural Natural exampleFun (Some 1) ≡ None
 
 let example1 = assert : concatMap Natural Natural exampleFun (Some 2) ≡ Some 3
 
-let example2 =
-        assert
-      : concatMap Natural Natural exampleFun (None Natural) ≡ None Natural
+let example2 = assert : concatMap Natural Natural exampleFun None ≡ None
 
 in  concatMap

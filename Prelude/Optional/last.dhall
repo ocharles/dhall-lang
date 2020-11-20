@@ -11,14 +11,12 @@ let last
             λ(r : Optional a) →
               merge { Some = λ(x : a) → Some x, None = l } r
           )
-          (None a)
+          None
 
-let example0 = assert : last Natural [ None Natural, Some 1, Some 2 ] ≡ Some 2
+let example0 = assert : last Natural [ None, Some 1, Some 2 ] ≡ Some 2
 
-let example1 =
-      assert : last Natural [ None Natural, None Natural ] ≡ None Natural
+let example1 = assert : last Natural [ None, None ] ≡ None
 
-let example2 =
-      assert : last Natural ([] : List (Optional Natural)) ≡ None Natural
+let example2 = assert : last Natural ([] : List (Optional Natural)) ≡ None
 
 in  last
