@@ -1,6 +1,6 @@
 let Example =
       { Type = { name : Text, id : Optional Natural }
-      , default = { name = "", id = None Natural }
+      , default = { name = "", id = None }
       }
 
 in  { example0 = Example::{=}

@@ -7,13 +7,12 @@ let nonNegative =
 
 let toNatural
     : Integer → Optional Natural
-    = λ(n : Integer) →
-        if nonNegative n then Some (Integer/clamp n) else None Natural
+    = λ(n : Integer) → if nonNegative n then Some (Integer/clamp n) else None
 
 let example0 = assert : toNatural +7 ≡ Some 7
 
 let example2 = assert : toNatural +0 ≡ Some 0
 
-let example3 = assert : toNatural -3 ≡ None Natural
+let example3 = assert : toNatural -3 ≡ None
 
 in  toNatural

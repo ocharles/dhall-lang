@@ -14,7 +14,7 @@ let build
           ∀(none : optional) →
             optional
         ) →
-        build (Optional a) (λ(x : a) → Some x) (None a)
+        build (Optional a) (λ(x : a) → Some x) None
 
 let example0 =
         assert
@@ -36,6 +36,6 @@ let example1 =
               λ(none : optional) →
                 none
             )
-        ≡ None Natural
+        ≡ None
 
 in  build

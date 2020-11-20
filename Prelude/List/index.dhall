@@ -8,10 +8,10 @@ let index
     = λ(n : Natural) → λ(a : Type) → λ(xs : List a) → List/head a (drop n a xs)
 
 let property =
-      λ(n : Natural) → λ(a : Type) → assert : index n a ([] : List a) ≡ None a
+      λ(n : Natural) → λ(a : Type) → assert : index n a ([] : List a) ≡ None
 
 let example0 = assert : index 1 Natural [ 2, 3, 5 ] ≡ Some 3
 
-let example1 = assert : index 1 Natural ([] : List Natural) ≡ None Natural
+let example1 = assert : index 1 Natural ([] : List Natural) ≡ None
 
 in  index

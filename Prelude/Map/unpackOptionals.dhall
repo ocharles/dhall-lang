@@ -29,10 +29,7 @@ let unpackOptionals
 
 let example0 =
         assert
-      :   unpackOptionals
-            Text
-            Text
-            (toMap { foo = Some "bar", baz = None Text })
+      :   unpackOptionals Text Text (toMap { foo = Some "bar", baz = None })
         ≡ toMap { foo = "bar" }
 
 in  unpackOptionals

@@ -18,8 +18,7 @@ let property2 =
       λ(a : Type) → assert : unpackOptionals a [ None a ] ≡ ([] : List a)
 
 let example0 =
-        assert
-      : unpackOptionals Natural [ Some 1, None Natural, Some 3 ] ≡ [ 1, 3 ]
+      assert : unpackOptionals Natural [ Some 1, None, Some 3 ] ≡ [ 1, 3 ]
 
 let example1 =
         assert
@@ -27,8 +26,6 @@ let example1 =
         ≡ ([] : List Natural)
 
 let example2 =
-        assert
-      :   unpackOptionals Natural [ None Natural, None Natural ]
-        ≡ ([] : List Natural)
+      assert : unpackOptionals Natural [ None, None ] ≡ ([] : List Natural)
 
 in  unpackOptionals

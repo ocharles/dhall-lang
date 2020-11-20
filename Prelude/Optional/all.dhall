@@ -11,6 +11,6 @@ let all
 
 let example0 = assert : all Natural Natural/even (Some 3) ≡ False
 
-let example1 = assert : all Natural Natural/even (None Natural) ≡ True
+let example1 = assert : all Natural Natural/even None ≡ True
 
 in  all

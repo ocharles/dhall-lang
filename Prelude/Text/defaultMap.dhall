@@ -8,6 +8,6 @@ let defaultMap
 
 let example0 = assert : defaultMap Natural Natural/show (Some 0) ≡ "0"
 
-let example1 = assert : defaultMap Natural Natural/show (None Natural) ≡ ""
+let example1 = assert : defaultMap Natural Natural/show None ≡ ""
 
 in  defaultMap

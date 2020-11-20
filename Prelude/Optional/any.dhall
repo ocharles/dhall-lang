@@ -11,6 +11,6 @@ let any
 
 let example0 = assert : any Natural Natural/even (Some 2) ≡ True
 
-let example1 = assert : any Natural Natural/even (None Natural) ≡ False
+let example1 = assert : any Natural Natural/even None ≡ False
 
 in  any

@@ -1,13 +1,13 @@
 let Example =
       { Type = { name : Text, id : Optional Natural }
-      , default = { name = "", id = None Natural }
+      , default = { name = "", id = None }
       }
 
 let ExtraFields = Example ∧ { extra = {=} }
 
 let RequiredFields =
         { Type = { name : Text, id : Optional Natural }
-        , default = { id = None Natural }
+        , default = { id = None }
         }
 
 let WrongDefaultType =

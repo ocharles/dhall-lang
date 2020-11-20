@@ -21,7 +21,7 @@ let listMax
 
 let example0 = assert : listMax [ 1, 2 ] ≡ Some 2
 
-let example1 = assert : listMax ([] : List Natural) ≡ None Natural
+let example1 = assert : listMax ([] : List Natural) ≡ None
 
 let property0 = λ(n : Natural) → assert : listMax [ n ] ≡ Some n
 

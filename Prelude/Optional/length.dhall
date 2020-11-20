@@ -9,6 +9,6 @@ let length
 
 let example0 = assert : length Natural (Some 2) ≡ 1
 
-let example1 = assert : length Natural (None Natural) ≡ 0
+let example1 = assert : length Natural None ≡ 0
 
 in  length

@@ -5,10 +5,10 @@ let map
       λ(b : Type) →
       λ(f : a → b) →
       λ(o : Optional a) →
-        merge { Some = λ(x : a) → Some (f x), None = None b } o
+        merge { Some = λ(x : a) → Some (f x), None = None } o
 
 let example0 = assert : map Natural Bool Natural/even (Some 3) ≡ Some False
 
-let example1 = assert : map Natural Bool Natural/even (None Natural) ≡ None Bool
+let example1 = assert : map Natural Bool Natural/even None ≡ None
 
 in  map

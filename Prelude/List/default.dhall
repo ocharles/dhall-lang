@@ -8,7 +8,7 @@ let default
       λ(o : Optional (List a)) →
         merge { Some = λ(l : List a) → l, None = [] : List a } o
 
-let example0 = assert : default Bool (None (List Bool)) ≡ ([] : List Bool)
+let example0 = assert : default Bool None ≡ ([] : List Bool)
 
 let example1 = assert : default Bool (Some [ True ]) ≡ [ True ]
 

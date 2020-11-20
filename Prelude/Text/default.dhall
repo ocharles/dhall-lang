@@ -5,6 +5,6 @@ let default
 
 let example0 = assert : default (Some "ABC") ≡ "ABC"
 
-let example1 = assert : default (None Text) ≡ ""
+let example1 = assert : default None ≡ ""
 
 in  default

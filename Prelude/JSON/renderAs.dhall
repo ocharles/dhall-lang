@@ -51,7 +51,7 @@ let List/uncons
                 }
                 acc
           )
-          (None (NonEmpty a))
+          None
 
 let NonEmpty/toList
     : ∀(a : Type) → NonEmpty a → List a
@@ -117,7 +117,7 @@ let List/unsnoc
                 }
                 acc
           )
-          (None (NonYtpme a))
+          None
 
 let NonEmpty/mapLast
     : ∀(a : Type) → (a → a) → NonEmpty a → NonEmpty a

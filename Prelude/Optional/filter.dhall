@@ -11,7 +11,7 @@ let filter
               ∀(none : optional) →
                 optional
             ) →
-            build (Optional a) (λ(x : a) → Some x) (None a)
+            build (Optional a) (λ(x : a) → Some x) None
         )
           a
           ( λ(optional : Type) →
@@ -24,6 +24,6 @@ let filter
 
 let example0 = assert : filter Natural Natural/even (Some 2) ≡ Some 2
 
-let example1 = assert : filter Natural Natural/odd (Some 2) ≡ None Natural
+let example1 = assert : filter Natural Natural/odd (Some 2) ≡ None
 
 in  filter

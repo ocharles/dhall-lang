@@ -6,7 +6,7 @@ let default
       λ(o : Optional a) →
         merge { Some = λ(x : a) → x, None = default } o
 
-let example0 = assert : default Bool False (None Bool) ≡ False
+let example0 = assert : default Bool False None ≡ False
 
 let example1 = assert : default Bool False (Some True) ≡ True
 

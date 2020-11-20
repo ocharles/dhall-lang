@@ -23,7 +23,7 @@ let listMin
 
 let example0 = assert : listMin [ 0, 1 ] ≡ Some 0
 
-let example1 = assert : listMin ([] : List Natural) ≡ None Natural
+let example1 = assert : listMin ([] : List Natural) ≡ None
 
 let example2 = assert : listMin [ 3, 2, 1 ] ≡ Some 1
 
